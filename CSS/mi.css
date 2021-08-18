@@ -1,0 +1,140 @@
+/* 清除浏览器默认样式 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.D1 a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    /* width: 240px; */
+    height: 40px;
+    background-color: rgb(90, 83, 83);
+    padding: 10px 148px 10px 50px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+a:hover {
+    background-color: rgb(231, 227, 224);
+    color: black;
+    text-decoration: underline;
+}
+
+.info a:hover {
+    background-color: transparent;
+}
+
+.info:hover {
+    box-shadow: 1px 1px 10px 2px #eee;
+}
+
+.nav {
+    height: 41px;
+    width: 100%;
+    border-top: 3px solid #ff8500;
+    border-bottom: 1px solid #edeef0;
+    margin-bottom: 10px;
+    background-color: #fcfcfc;
+    text-align: center;
+    position: fixed;
+    /* border-radius: 5px; */
+    /* padding: 0 0 0 451px; */
+}
+
+.nav span {
+    margin: auto;
+}
+
+.nav a {
+    /* width: 200px; */
+    display: inline-block;
+    text-align: center;
+    line-height: 41px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #4c4c4c;
+    text-decoration: none;
+    margin: auto;
+}
+
+span {
+    vertical-align: middle;
+}
+
+.info {
+    background-color: #f5f7f5;
+    border: 1px solid #eee;
+    width: 300px;
+    height: 280px;
+    float: right;
+    margin-left: 20px;
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.info img {
+    width: 300px;
+}
+
+.D2 {
+    text-align: right;
+    margin-top: 20px;
+    color: #575757;
+    font: 14px 'Microsoft YaHei';
+    padding: 0 20px 0 0;
+}
+
+.daoHang {
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #eee;
+}
+
+.daoHang li {
+    list-style: none;
+    padding: 5px;
+}
+
+.daoHang ul li a {
+    text-decoration: none;
+}
+
+.fuDong {
+    margin: 0 auto;
+    width: 1200px;
+    height: 460px;
+    background-color: #eee;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.left {
+    width: 230px;
+    height: 460px;
+    float: left;
+    background-color: blue;
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    width: 970px;
+    height: 460px;
+    float: right;
+    background-color: rgb(245, 245, 237);
+    border-radius: 0 10px 10px 0;
+}
+
+.right ul li {
+    width: 232.5px;
+    height: 215px;
+    float: right;
+    margin: 8px 0 0 8px;
+    border: 1px solid #4c4c4c;
+    border-collapse: collapse;
+    list-style: none;
+}

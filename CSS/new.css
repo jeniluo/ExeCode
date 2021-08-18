@@ -1,0 +1,30 @@
+form {
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.images {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 10px;
+}
+
+img {
+    margin: auto;
+    border-radius: 50px;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 28px;
+    font-size: 17px;
+    font-family: "Microsoft YaHei", "Times New Roman";
+    font-style: normal;
+}
+
+h4 {
+    text-indent: 2em;
+}

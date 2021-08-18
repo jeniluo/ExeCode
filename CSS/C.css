@@ -1,0 +1,59 @@
+.Father {
+    width: auto;
+    height: 900px;
+    background-image: url("../images/91147521_p0_master1200.jpg");
+}
+
+h1 {
+    margin: auto;
+    width: 400px;
+    height: 60px;
+    text-align: center;
+}
+
+.son1 {
+    margin-top: 100px;
+    width: 1500px;
+}
+
+p {
+    margin-top: 20px;
+    margin: auto;
+    width: 1000px;
+    height: 50px;
+    color: rgb(236, 53, 108);
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    text-indent: 2em;
+    line-height: 20px;
+}
+
+/* 删除下划线 */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.Baidu {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../images/百度.png");
+}
+
+a:hover {
+    color: rgb(235, 78, 39);
+}
+
+.a1 {
+    color: aqua;
+    font-size: 30px;
+}
+
+.a2 {
+    font-size: 18px;
+    color: black;
+}

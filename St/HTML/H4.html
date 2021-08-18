@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+<body>
+    <h1>青春不常在，抓紧谈恋爱！</h1>
+    <table width="400px">
+        <form action="url地址处理数据" method="提交方式get\post" name="表单域名">
+            <!-- text -->
+            <tr>
+                <td>输入姓名：</td>
+                <td>
+                    <input type="test" name="username" maxlength="30" />
+                </td>
+            </tr>
+            <!-- email -->
+            <tr>
+                <td>输入邮件：</td>
+                <td>
+                    <input type="email" name="email" />
+                </td>
+            </tr>
+            <!-- passwprd -->
+            <tr>
+                <td>输入密码：</td>
+                <td>
+                    <input type="password" name="password" />
+                </td>
+            </tr>
+            <!-- radio 单选按钮需要一个相同的name才能实现选择一个选项  lable属性如下 cheaked适用于单选和多选按钮 打开页面默认选择 -->
+            <tr>
+                <td>选择性别：</td>
+                <td>
+                    <input type="radio" name="sex" checked="checked" value="男" id="nan" /><label for="nan">男</label>
+                    <input type="radio" name="sex" value="女" id="nv" /><label for="nv">女</label>
+                </td>
+            </tr>
+            <!-- checkbox 多选也需要一个相同的name -->
+            <tr>
+                <td>选择兴趣：</td>
+                <td>
+                    <input type="checkbox" name="intrest" value="唱" />唱<input type="checkbox" name="intrest"
+                        value="跳" />跳<input type="checkbox" name="intrest" value="RAP" />RAP<input type="checkbox"
+                        name="intrest" value="篮球" />篮球
+                </td>
+            </tr>
+            <!-- 下拉表格选择 -->
+            <tr>
+                <td>选择出生日期：</td>
+                <td>
+                    <select>
+                        <option>1990</option>
+                        <option>1991</option>
+                        <option>1992</option>
+                        <option>1993</option>
+                        <option>1994</option>
+                        <option>1995</option>
+                        <option>1996</option>
+                        <option>1997</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                    </select>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>个人介绍：</td>
+                <td>
+                    <textarea cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <!-- 输入提交或者重置 -->
+            <tr>
+                <td></td>
+                <td><input type="submit" value="注册" />&ensp;<input type="reset" value="重置" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" checked="cheaked">我同意网站注册条例</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="../index.html">已有账号点击跳转登陆-></a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h3>本人承诺：</h3>
+                    <ul>
+                        <li>遵守法律法规</li>
+                        <li>遵守平台规则</li>
+                        <li>诚信学习前端</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- button 结合JS使用
+            <input type="button" value="普通按钮" /><br><br> -->
+            <!-- file 文件选择上传-->
+            <!-- <input type="file" value="上传文件" /> -->
+        </form>
+    </table>
+</body>
+
+</html>

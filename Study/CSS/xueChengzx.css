@@ -60,13 +60,40 @@ a {
     display: none;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0, .3) url(../images/search.png) no-repeat center center;
+    background: rgb(0, 0, 0, .3) url(../images/播放.png) no-repeat center center;
 }
 
-/* 经过显示方法 */
+/* 鼠标经过显示方法 */
 
 .RightPlay:hover .mask {
     display: block;
+}
+
+/* 兴趣修改 */
+
+.interests {
+    position: absolute;
+    top: 550px;
+    right: 340px;
+    /* display: none; */
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #fff;
+}
+
+.more-interests {
+    position: absolute;
+    top: 530px;
+    right: 190px;
+    /* display: none; */
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 14px 10px 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .header {
@@ -129,6 +156,7 @@ a {
     box-sizing: border-box;
     color: #bfbfbf;
     font-size: 14px;
+    outline: none;
 }
 
 .search button {
@@ -175,8 +203,7 @@ a {
     box-sizing: border-box;
 }
 
-.w>.lt,
-.w.gt {
+.w>.lt, .w.gt {
     display: inline-block;
     position: absolute;
     top: 210px;

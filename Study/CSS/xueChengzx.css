@@ -20,55 +20,6 @@ a {
     text-decoration: none;
 }
 
-.Listleft {
-    position: absolute;
-    top: 910px;
-    left: 150px;
-    width: 180px;
-    height: 430px;
-    padding: 20px 10px 0 20px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-}
-
-.Listleft ul li {
-    width: 150px;
-    height: 25px;
-    margin-bottom: 12px;
-}
-
-.Listleft ul li a {
-    font-size: 14px;
-    color: black;
-}
-
-.Listleft ul li a:hover {
-    color: #00a4ff;
-}
-
-.RightPlay {
-    position: absolute;
-    top: 666px;
-    right: 10px;
-    width: 300px;
-    height: 280px;
-    background-color: pink;
-}
-
-.mask {
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0, .3) url(../images/播放.png) no-repeat center center;
-}
-
-/* 鼠标经过显示方法 */
-
-.RightPlay:hover .mask {
-    display: block;
-}
-
 /* 兴趣修改 */
 
 .interests {
@@ -95,6 +46,8 @@ a {
     box-sizing: border-box;
     text-align: center;
 }
+
+/* 头部制作 */
 
 .header {
     position: sticky;
@@ -165,6 +118,13 @@ a {
     height: 42px;
     background-color: #00a4ff;
     border: 1px solid #00a4ff;
+    /* 过渡动画 */
+    transition: all .2s linear;
+}
+
+.search button:hover {
+    border-color: #ec540e;
+    background-color: #ec540e;
 }
 
 /* 用户 */
@@ -184,6 +144,7 @@ a {
 /* banner */
 
 .banner {
+    position: relative;
     height: 420px;
     background-color: #1c036c;
 }
@@ -193,6 +154,80 @@ a {
     height: 420px;
     background: url(../images/banner2.png) no-repeat top center;
 }
+
+/* banner中侧边栏 */
+
+.banner .Listleft {
+    position: absolute;
+    top: 600px;
+    left: -200px;
+    width: 180px;
+    height: 430px;
+    padding: 20px 10px 0 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.banner .Listleft ul li {
+    width: 150px;
+    height: 25px;
+    margin-bottom: 12px;
+}
+
+.banner .Listleft ul li a {
+    font-size: 14px;
+    color: black;
+}
+
+.banner .Listleft ul li a:hover {
+    color: #00a4ff;
+}
+
+/* 视频播放 */
+
+.banner .RightPlay {
+    position: absolute;
+    top: 566px;
+    right: -330px;
+    width: 300px;
+    height: 280px;
+    background-color: pink;
+}
+
+/* 遮罩方法2 */
+
+.banner .RightPlay::before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .3) url(../images/播放.png) no-repeat center center;
+}
+
+/* 遮罩方法1 */
+
+/* .mask {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .3) url(../images/播放.png) no-repeat center center;
+} */
+
+/* 鼠标经过显示方法 */
+
+/* 遮罩方法2  推荐 */
+
+.banner .RightPlay:hover::before, .mask {
+    display: block;
+}
+
+/* 遮罩方法1 */
+
+/* .RightPlay:hover .mask {
+    display: block;
+} */
 
 .subnav {
     float: left;
@@ -261,9 +296,17 @@ a {
     font-size: 14px;
 }
 
-.subnav ul li a span {
+/* 文字图标和伪元素使用 */
+
+.subnav ul li a::after {
     float: right;
+    content: "\e902";
+    font-family: "icomoon";
 }
+
+/* .subnav ul li a span {
+    float: right;
+} */
 
 .subnav ul li a:hover {
     color: #02a4ec;
@@ -403,6 +446,14 @@ a {
     height: 270px;
     margin: 15px 15px 0px 0px;
     background-color: #ffffff;
+    /* 动画过渡使用 */
+    transition: box-shadow .5s linear, transfrom 1s linear;
+}
+
+.box-fd ul li:hover {
+    /* 盒子上移 */
+    transform: translateY(-3px);
+    box-shadow: 0 3px 4px 3px rgb(0, 0, 0, 0.1);
 }
 
 .box-fd ul li>img {

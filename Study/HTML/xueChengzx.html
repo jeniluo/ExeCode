@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学成在线</title>
     <link rel="stylesheet" href="../CSS/xueChengzx.css">
+    <link rel="shortcut icon" href="favicon.ico">
     <style>
         /* 字体申明 */
         @font-face {
             font-family: 'icomoon';
-            src: url('fonts/icomoon.eot?u59n96');
-            src: url('fonts/icomoon.eot?u59n96#iefix') format('embedded-opentype'),
-                url('fonts/icomoon.ttf?u59n96') format('truetype'),
-                url('fonts/icomoon.woff?u59n96') format('woff'),
-                url('fonts/icomoon.svg?u59n96#icomoon') format('svg');
+            src: url('fonts/icomoon.eot?2o92em');
+            src: url('fonts/icomoon.eot?2o92em#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?2o92em') format('truetype'),
+                url('fonts/icomoon.woff?2o92em') format('woff'),
+                url('fonts/icomoon.svg?2o92em#icomoon') format('svg');
             font-weight: normal;
             font-style: normal;
             font-display: block;
@@ -24,26 +25,6 @@
 </head>
 
 <body>
-    <div class="Listleft">
-        <ul>
-            <li><a href="#">编程入门</a></li>
-            <li><a href="#">数据分析师</a></li>
-            <li><a href="#">机器学习工程师</a></li>
-            <li><a href="#">前端开发工程师</a></li>
-            <li><a href="#">人工智能工程师</a></li>
-            <li><a href="#">全栈工程师</a></li>
-            <li><a href="#">iOS工程师</a></li>
-            <li><a href="#">VR工程师</a></li>
-            <li><a href="#">深度学习</a></li>
-            <li><a href="#">商业预测分析师</a></li>
-            <li><a href="#">Android开发工程师</a></li>
-        </ul>
-    </div>
-    <div class="RightPlay">
-        <a class="mask" href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.5"
-            target="_blank"></a>
-        <img src="../images/banner3.png" alt="" style="height: 280px; width: 300px;">
-    </div>
     <!-- 兴趣 -->
     <div class="interests"></div>
     <div class="more-interests">
@@ -52,7 +33,7 @@
     <!-- header -->
     <div class="header">
         <div class="w">
-            <div class="logo"><img src="../images/学成在线.png"></div>
+            <a href="../index.html" target="_blank" class="logo"><img src="../images/学成在线.png"></a>
             <div class="nav">
                 <ul>
                     <li><a href="#">首页</a></li>
@@ -62,7 +43,7 @@
             </div>
             <div class="search">
                 <form action="index.php">
-                    <input type="search" required="required" placeholder="请输入关键词">
+                    <input type="search" required="required" placeholder="请输入关键词" style="color: black;">
                     <button>
                         <img src="../images/search.png">
                     </button>
@@ -80,18 +61,40 @@
     <!-- banner -->
     <div class="banner">
         <div class="w">
+            <!-- 侧边栏 -->
+            <div class="Listleft">
+                <ul>
+                    <li><a href="#">编程入门</a></li>
+                    <li><a href="#">数据分析师</a></li>
+                    <li><a href="#">机器学习工程师</a></li>
+                    <li><a href="#">前端开发工程师</a></li>
+                    <li><a href="#">人工智能工程师</a></li>
+                    <li><a href="#">全栈工程师</a></li>
+                    <li><a href="#">iOS工程师</a></li>
+                    <li><a href="#">VR工程师</a></li>
+                    <li><a href="#">深度学习</a></li>
+                    <li><a href="#">商业预测分析师</a></li>
+                    <li><a href="#">Android开发工程师</a></li>
+                </ul>
+            </div>
+            <!-- 视频 -->
+            <a class="RightPlay"
+                href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.5"
+                target="_balnk">
+                <img src="../images/banner3.png" alt="" style="height: 280px; width: 300px;">
+            </a>
             <div class="subnav">
                 <ul>
-                    <li><a href="https://www.bilibili.com/video/BV14J4114768?p=249"
-                            target="_blank">前端开发<span>&gt;</span></a></li>
-                    <li><a href="#">后端开发<span>&gt;</span></a></li>
-                    <li><a href="#">移动开发<span>&gt;</span></a></li>
-                    <li><a href="#">人工智能<span>&gt;</span></a></li>
-                    <li><a href="#">商业预测<span>&gt;</span></a></li>
-                    <li><a href="#">云计算&大数据<span>&gt;</span></a></li>
-                    <li><a href="#">运维&测试<span>&gt;</span></a></li>
-                    <li><a href="#">UI设计<span>&gt;</span></a></li>
-                    <li><a href="#">产品<span>&gt;</span></a></li>
+                    <li><a href="https://www.bilibili.com/video/BV14J4114768?p=249" target="_blank">前端开发</a></li>
+                    <li><a href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.5"
+                            target="_blank">后端开发</a></li>
+                    <li><a href="#">移动开发</a></li>
+                    <li><a href="#">人工智能</a></li>
+                    <li><a href="#">商业预测</a></li>
+                    <li><a href="#">云计算&大数据</a></li>
+                    <li><a href="#">运维&测试</a></li>
+                    <li><a href="#">UI设计</a></li>
+                    <li><a href="#">产品</a></li>
                 </ul>
             </div>
             <span class="lt"><a href="#" style="color: #fff;">&lt;</a></span><span class="gt"><a href="#"
@@ -449,7 +452,8 @@
             <div class="left-box">
                 <img src="../images/学成在线.png" style="margin-left: 15px;">
                 <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。 © 2017年XTCG Inc.保留所有权利。-沪I</p>
-                <a href="#">下载APP</a>
+                <a href="https://app.bilibili.com/?spm_id_from=333.851.b_696e7465726e6174696f6e616c486561646572.8"
+                    target="_blank">下载APP</a>
             </div>
             <div class="right-box">
                 <div class="links">

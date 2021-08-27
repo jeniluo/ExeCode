@@ -1,0 +1,241 @@
+/* 主页 */
+
+.main {
+    height: 455px;
+    padding-top: 10px;
+}
+
+.main .focus {
+    float: left;
+    position: relative;
+    height: 455px;
+    width: 720px;
+    margin: 0 10px 0 220px;
+    background: url("../upload/focus.png") no-repeat;
+}
+
+/* 侧边栏 */
+
+.focus .leftnav {
+    position: absolute;
+    top: 157px;
+    left: -296px;
+    height: 352px;
+    border-color: crimson;
+}
+
+.focus .leftnav ul li {
+    width: 66px;
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+}
+
+.focus .leftnav ul li a {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    width: 66px;
+    height: 31px;
+    padding: 0 5px;
+    transition: color .5s linear, background-color .5s linear;
+}
+
+.focus .leftnav ul li a::after {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    content: '';
+    z-index: -1;
+    width: 56px;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+.focus .leftnav ul li a:hover {
+    color: #fff;
+    background-color: #c81623;
+}
+
+.main .newsflash {
+    float: right;
+    height: 455px;
+    width: 250px;
+    /* border: 1px solid #eee;
+    box-sizing: border-box; */
+}
+
+.main .newsflash .news {
+    height: 165px;
+    border: 1px solid #eee;
+    border-bottom: 0px;
+    box-sizing: border-box;
+}
+
+.main .newsflash .news ol {
+    padding: 10px 15px 8px 15px;
+    box-sizing: border-box;
+}
+
+.main .newsflash .news ol dt {
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+    font-family: 'icomoon';
+}
+
+.main .newsflash .news ol dd {
+    width: 219px;
+    font-size: 12px;
+    margin-top: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* .main .newsflash .news ol dd a {
+    display: inline-block;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */
+
+.main .newsflash .news ol dd span {
+    font-weight: 800;
+    color: crimson;
+}
+
+.main .newsflash .lifeservice {
+    height: 210px;
+}
+
+.main .newsflash .lifeservice ul {
+    height: 210px;
+    width: 250px;
+    text-align: center;
+    /* background-color: cornflowerblue; */
+    /* border-left: 1px solid #eee; */
+    border-bottom: 1px solid #eee;
+}
+
+.main .newsflash .lifeservice ul li {
+    float: left;
+    width: calc(250px / 4);
+    height: calc(210px / 3);
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main .newsflash .lifeservice ul li a i {
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    margin-top: 12px;
+    /* background-image: url("../images/icons.png"); */
+}
+
+.main .newsflash .bargain {
+    margin-top: 5px;
+    height: 75px;
+    background: url("../upload/bargain.png") no-repeat;
+}
+
+/* 推荐 */
+
+.recomand {
+    margin-top: 11px;
+    height: 163px;
+    margin-bottom: 31px;
+    /* background-color: crimson; */
+}
+
+.recomand .recom_hd {
+    float: left;
+    width: 205px;
+    height: 163px;
+    background: url("../images/recom.png") no-repeat center center #5c5251;
+}
+
+.recomand .recom_bd {
+    float: right;
+}
+
+.recomand .recom_bd ul {
+    float: left;
+    width: 995px;
+    padding: 10px 2px 10px 1px;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+
+.recomand .recom_bd ul li {
+    float: left;
+    width: 248px;
+    height: 143px;
+    border-right: 1px solid #ddd;
+}
+
+/* 猜你喜欢 */
+
+.like {
+    height: 261px;
+    margin-bottom: 30px;
+}
+
+.like .like_hd {
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.like .like_hd p {
+    float: left;
+    font-size: 18px;
+}
+
+.like .like_hd a {
+    float: right;
+    font-family: 'icomoon';
+    font-size: 12px;
+    margin-right: 21px;
+}
+
+.like .like_bd {
+    height: 233px;
+    box-sizing: border-box;
+}
+
+.like .like_bd ul li {
+    float: left;
+    width: 200px;
+    height: 233px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.like .like_bd ul li a img {
+    height: 160px;
+    /* width: 200px; */
+    margin-bottom: 3px;
+}
+
+.like .like_bd ul li .intro {
+    border-right: 1px solid #ebebeb;
+}
+
+.like .like_bd ul li a p {
+    font-size: 12px;
+    height: 12px;
+    width: 200px;
+    margin-bottom: 5px;
+    padding-left: 36px;
+}
+
+.like .like_bd ul li a .price {
+    font-size: 15px;
+    height: 15px;
+    padding-left: 36px;
+    color: #df3033;
+}

@@ -1,0 +1,69 @@
+.header {
+    border-bottom: 2px solid #c81623;
+}
+
+.register {
+    height: 520px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.register h3 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+    background-color: #ececec;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.register h3 .login {
+    float: right;
+    font-size: 14px;
+}
+
+.reg_form {
+    width: 600px;
+    margin: 50px auto 0;
+    /* text-align: center; */
+}
+
+.reg_form li label {
+    display: inline-block;
+    font-size: 14px;
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.reg_form li input {
+    width: 241px;
+    height: 36px;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+}
+
+.reg_form li .xieyi {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.reg_form>button {
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    color: #fff;
+}
+
+.footer {
+    height: 200px;
+    padding: 30px 0 0 0;
+    background-color: #fff;
+}

@@ -28,6 +28,22 @@
     color: #c81623;
 }
 
+/* 回到顶部 */
+
+.Totop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-family: 'icomoon';
+    background-color: #f9f9f9;
+    text-align: center;
+    line-height: 60px;
+}
+
 /* 快捷导航 */
 
 .shortcut {

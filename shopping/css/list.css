@@ -1,0 +1,110 @@
+/* 秒杀 */
+
+.header .sk {
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    padding: 3px 0 3px 14px;
+    border-left: 1px solid #c81623;
+}
+
+.nav_left {
+    float: left;
+}
+
+.nav_left ul li {
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 27px 0 28px;
+}
+
+.nav_right {
+    float: left;
+    margin-left: 31px;
+}
+
+.nav_right ul li {
+    float: left;
+    font-size: 14px;
+    margin-right: 46px;
+}
+
+.nav_right ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+
+/* 内容 */
+
+.sk_container .sk_bd {
+    margin-top: 25px;
+}
+
+.sk_container .sk_bd ul li {
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+}
+
+.sk_container .sk_bd ul li:hover {
+    border: 1px solid #c81623;
+    /* box-sizing: border-box; */
+}
+
+.sk_container .sk_bd ul li:nth-child(4n) {
+    margin: 0;
+}
+
+.sk_container .sk_bd ul li a p {
+    font-size: 14px;
+    padding: 0 11px 0 12px;
+    margin-bottom: 15px;
+}
+
+.sk_container .sk_bd ul li a h4 {
+    padding-left: 11px;
+    font-size: 18px;
+    color: #c81623;
+}
+
+.sk_container .sk_bd ul li a h4 span {
+    font-size: 14px;
+    color: #ababab;
+}
+
+.sk_container .sk_bd ul li a .Mai {
+    text-align: center;
+    width: 288px;
+    height: 49px;
+    line-height: 49px;
+    font-size: 18px;
+    background-color: #c81623;
+    color: #fff;
+}
+
+.sk_container .sk_bd ul li a .info {
+    padding-left: 11px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+}
+
+.sk_container .sk_bd ul li a .info .tiao {
+    display: inline-block;
+    margin-right: 5px;
+    width: 132px;
+    height: 12px;
+    border-radius: 6px;
+    border: 1px solid #c81623;
+    box-sizing: border-box;
+}
+
+.sk_container .sk_bd ul li a .info .tiao .to {
+    width: 87%;
+    height: 100%;
+    background-color: red;
+}

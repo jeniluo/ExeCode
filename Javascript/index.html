@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>JS - 快乐学习前端技术、面向对象</title>
+    <script type="text/javascript" src="Js/jquery-3.6.0.min.js"></script>
+    <script>
+        var x = prompt('请输入您的出生年份？');
+        // var y = prompt('第二个数');
+        var z = 2021 - x * 1.0;
+        alert('你的年龄是' + z);
+        var str, i = 0,
+            youKnow = '我爱你';
+        do {
+            if (i > 0) {
+                str = prompt('我相信你爱我，写嘛"我爱你"')
+            } else {
+                str = prompt('请输入"我爱你"');
+            }
+            i++;
+        } while (str != '我爱你');
+        var num = 0x0100;
+        var str = 18;
+        console.log((4 > 2) ? 78 : 80);
+        parseInt(str)
+        console.log(num);
+        var date = [2, 1, 4, 7, 8, 5, 0];
+        for (var i = 0; i < date.length; i++) {
+            console.log(date[i]);
+        }
+    </script>
+    <style>
+        #aini {
+            display: none;
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            border-radius: 100px;
+            background-color: pink;
+            line-height: 500px;
+            text-align: center;
+            font-size: 100px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="Js/one.js"></script>
+    <input type="button" value="点一下" id="ai">
+    <div id="aini">我也爱你！嘻嘻~</div>
+</body>
+
+</html>

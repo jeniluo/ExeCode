@@ -14,6 +14,16 @@
     background: url("../upload/focus.png") no-repeat;
 }
 
+.main .focus .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #c81623;
+    display: none;
+}
+
 /* 侧边栏 */
 
 .focus .leftnav {

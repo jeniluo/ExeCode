@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>JS - 快乐学习前端技术、面向对象</title>
+    <script>
+        /* console.log(Math.max(1, 4, 5, 77, 54, 32, 53));
+        var myMath = {
+            PI: 3.14159269787,
+            max: function () {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > max)
+                        max = arguments[i]
+                }
+                return max;
+            },
+            min: function () {
+                var min = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] < min)
+                        min = arguments[i]
+                }
+                return min;
+            }
+        }
+        console.log(myMath.max(23, 44, 56, 73, 342, 324, 667, 832, 23, 54, 5, 22, 34, 44));
+        console.log(myMath.min(3, 0, -3, 4, 53, -333, 232, -342, 34, 33));
+
+        console.log(Math.round(-1.6));
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        console.log(getRandomIntInclusive(1, 100)); // 最大减去最小加上一再乘以伪随机数最后加一，[0,1)*10 + 1 最后向下取整
+
+        // 日期对象
+
+
+        function getTimer() {
+            var date = new Date();
+            var hours = date.getHours();
+            hours = hours > 10 ? hours : '0' + hours;
+            var minutes = date.getMinutes();
+            minutes = minutes > 10 ? minutes : '0' + minutes;
+            var seconds = date.getSeconds();
+            seconds = seconds > 10 ? seconds : '0' + seconds;
+            var time = date.getTime();
+            // var time = +new Date();
+            // cosole.log(Date.now()); time = Date.now()
+            return hours + ':' + minutes + ':' + seconds + '::' + time;
+        }
+        console.log(getTimer());
+
+        function countDown(time) {
+            var nowTime = +new Date();
+            var inputTime = +new Date(time);
+            var times = (inputTime - nowTime) / 1000;
+            var d = parseInt(times / 3600 / 24);
+            d = d > 10 ? d : '0' + d;
+            var h = parseInt(times / 3600 % 24);
+            h = h > 10 ? h : '0' + h;
+            var m = parseInt(times / 60 % 60);
+            m = m > 10 ? m : '0' + m;
+            var s = parseInt(times % 60);
+            s = s > 10 ? s : '0' + s;
+            return d + 'd-' + h + 'h:' + m + 'm:' + s + 's';
+        }
+        console.log(countDown('2021-9-9 00:00:00'));
+
+        var arr1 = new Array(2); // 创建一个数组长度为2，空值
+        var arr2 = new Array(2, 3); // 创建数组 arr2 = [2, 3];
+
+        // 检测是否为数组
+        //instanceof // 运算符 它可以用来检测是否为数组
+        console.log(arr1 instanceof Array); // ture / false
+        console.log(Array.isArray(arr1)); // 参数放在小括号里*/
+
+        var str = 'ssssss';
+        console.log(str.replace('ss', 'b'));
+
+        // 求最大值
+        function getMax(array) {
+            var max = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        // 数组去重复
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                newArr.indexOf(arr[i]) === -1 ? newArr.push(arr[i]) : newArr = newArr
+            }
+            return newArr;
+        }
+
+        // 查找字符出现位置和次数
+        function chaZhao(char, str) {
+            var str1 = [],
+                count = 0,
+                i = 0;
+            do {
+                i = str.indexOf(char, i);
+                if (i != -1) {
+                    str1[str1.length] = i;
+                    count++;
+                    i++;
+                }
+            } while (i != -1);
+            str1.push(count);
+            return str1;
+        }
+        var str = prompt('请输入一串将要被查找的字符串：');
+        // var char = prompt('输入你需要查找的字符：');
+        var quChong = unique(str);
+        var strChar = [];
+        var cZ;
+        for (var i = 0; i < quChong.length; i++) {
+            cZ = chaZhao(quChong[i], str);
+            strChar[strChar.length] = cZ[cZ.length - 1];
+        }
+        var maxCount = getMax(strChar);
+        for (var i = 0; i < strChar.length; i++) {
+            if (strChar[i] == maxCount)
+                console.log('出现次数最多的字符是：' + quChong[i] + ' 出现的次数是：' + maxCount);
+        }
+
+        /* console.log('出现最多的字符是：' + char1 + '出现次数：' + count1);
+        console.log('出现最多的字符是：' + char1 + ' 和 ' + char2 + ' 出现次数：' + count1)
+        if (cZ[cZ.length - 1] != 0) {
+            console.log(char + '出现的次数是：' + cZ[cZ.length - 1]);
+            cZ.pop();
+            console.log(char + '出现的位置下标分别是：' + cZ);
+        } else {
+            console.log('您输入的字符串 ' + str + ' 中没有 ' + char + ' 字符！')
+        }
+        var index = 0;
+        console.log(str.charAt(index++)); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

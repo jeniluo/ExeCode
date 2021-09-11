@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>JS - 快乐学习前端技术、面向对象</title>
+    <link rel="stylesheet" href="css/Initialize.css">
+</head>
+
+<body>
+    <div id="time"></div>
+    <!-- <ul>
+        <li class="box">1</li>
+        <li class="box">2</li>
+    </ul>
+    <ol id="ol">
+        <li>玩尼玛！！！</li>
+        <li>玩尼玛！！！</li>
+    </ol> -->
+    <div id="btn" style="cursor: pointer;">唐伯虎</div>
+    <button id="btn1">时间</button>
+    <div class="srccc"></div>
+    <button id="zhang">张学友</button>
+    <button id="liu">刘德华</button><br>
+    <img src="" alt="" id="img1">
+
+    <img src="" alt="" id="img2">
+    <div id="wHy"></div>
+
+    <script>
+        var timer = document.getElementById('time');
+        timer.innerHTML = getTimer();
+
+        /* console.dir(timer);
+        var liList = document.getElementsByTagName('li');
+        console.log(liList);
+        console.log(liList[0]);
+        for (var i = 0; i < liList.length; i++) {
+            console.log(liList[i]);
+        }
+        var ol = document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+        console.log(document.querySelector('#time'));
+        console.log(document.querySelector('.box'));
+        console.log(document.querySelector('li'));
+        console.log(document.querySelectorAll('.box'));
+        console.log(document.body);
+        console.log(document.documentElement); */
+        var btn = document.querySelector('#btn');
+        btn.onclick = function () {
+            alert('点秋香')
+        }
+        var btn1 = document.querySelector('#btn1');
+        var srccc = document.querySelector('.srccc')
+        btn1.onclick = function () {
+            srccc.innerText = getTimer();
+        }
+
+        function getTimer() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            month = month > 10 ? month : '0' + month;
+            var day = date.getDate();
+            day = day > 10 ? day : '0' + day;
+            var week = date.getDay();
+            var array = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            // var time = +new Date();
+            // cosole.log(Date.now()); time = Date.now()
+            return year + '年' + month + '月' + day + '日' + array[week];
+        }
+
+        var zhang = document.querySelector('#zhang');
+        var liu = document.querySelector('#liu');
+        var img1 = document.querySelector('#img1');
+        zhang.onclick = function () {
+            img1.src = '../shopping/upload/nav1.png';
+            img1.title = '张学友（不是）';
+        }
+        liu.onclick = function () {
+            img1.src = '../shopping/upload/nav6.jfif';
+            img1.title = '刘德华（不是）';
+            // liu.disabled = true; // 按钮禁用
+            this.disabled = true; // 按钮禁用同上
+        }
+
+        var img2 = document.querySelector('#img2');
+        var wHy = document.querySelector('#wHy');
+        var date = new Date();
+        var hours = date.getHours();
+        if (hours >= 7 && hours < 12) {
+            img2.src = '../shopping/upload/nav2.jfif';
+            wHy.innerHTML = '早上好！';
+        } else if (hours >= 12 && hours < 18) {
+            img2.src = '../shopping/upload/nav3.jfif';
+            wHy.innerHTML = '下午好！';
+        } else {
+            img2.src = '../shopping/upload/nav4.jfif';
+            wHy.innerHTML = '晚上好！';
+        }
+    </script>
+</body>
+
+</html>

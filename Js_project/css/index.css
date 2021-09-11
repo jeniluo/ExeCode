@@ -1,0 +1,137 @@
+body {
+    background: url('../images/1.jpg') no-repeat top center;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 30px;
+    border-bottom: 1px solid red;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.box input {
+    width: 350px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 15px 0 0 15px;
+    padding: 0 0 0 15px;
+}
+
+.box img {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    width: 24px;
+    border-radius: 12px;
+}
+
+.box1 {
+    position: relative;
+    width: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+.box1 .no {
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    height: 15px;
+    width: 15px;
+}
+
+.jiu {
+    width: 280px;
+    margin: 50px auto 0;
+}
+
+.jiu ul li {
+    float: left;
+    text-align: center;
+    width: 70px;
+    height: 75px;
+    /* background-color: pink; */
+}
+
+.jiu ul li i {
+    display: inline-block;
+    margin-top: 10px;
+    width: 24px;
+    height: 25px;
+    background: url('../images/sprite.png') no-repeat;
+}
+
+.search {
+    float: left;
+    width: 200px;
+    border: 1px solid #999;
+    border-right: none;
+    color: #999;
+    box-sizing: border-box;
+}
+
+.btn_search {
+    float: left;
+    width: 50px;
+    height: 21px;
+    box-sizing: border-box;
+    background-color: #e95916;
+    color: #fff;
+}
+
+.btn_search_change {
+    height: 50px;
+}
+
+.change_background {
+    margin: 10px auto;
+    width: 640px;
+    height: 100px;
+    /* background-color: pink; */
+    box-sizing: border-box;
+}
+
+.change_background ul li {
+    float: left;
+}
+
+.change_background ul li img {
+    height: 100px;
+}
+
+.store {
+    text-align: center;
+    box-sizing: border-box;
+    width: 360px;
+    margin: 10px auto;
+}
+
+.store thead {
+    background-color: rgb(72, 255, 255);
+}
+
+.store table {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border-spacing: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+.store th, .store td {
+    width: 120px;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-spacing: 0;
+    border: 1px solid #eee;
+}
+
+.store .select_box, .store .son_select_box {
+    width: 40px;
+}

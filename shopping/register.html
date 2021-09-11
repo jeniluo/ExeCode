@@ -29,8 +29,13 @@
                     style="margin-left: 10px; height: 30px; line-height: 30px;">获取验证码</button></li>
             <li><label for="">短信验证码：</label><input type="text" required="required" placeholder="请输入6位验证码"></li>
             <li><label for="">邮箱：</label><input type="email" placeholder="example@example.com" required="required"></li>
-            <li><label for="">登陆密码：</label><input type="password" placeholder="不小于6位，包含大小写数字" required="required"></li>
-            <li><label for="">再次输入登陆密码：</label><input type="password"></li>
+            <li class="password_box"><label for="">登陆密码：</label><input type="password" placeholder="6-16位，包含大小写数字下划线等"
+                    class="password" required="required"><img src="images/close.png" alt="" id="eyes">
+                <div class="hint"><img src="" alt="" class="error_img"><span class="error"></span></div>
+            </li>
+            <li><label for="">再次输入登陆密码：</label><input type="password" class="password_again">
+                <div class="hint"><img src="" alt="" class="error_img_again"><span class="error_again"></span></div>
+            </li>
             <li><label for=""></label><input type="checkbox" checked="checked" class="xieyi">同意协议并注册 <a href="#"
                     style="color: #1ba1e6;">《品优购用户协议》</a> </li>
             <button type="submit">完成注册</button>
@@ -57,12 +62,14 @@
                     </ul>
                 </div><br>
                 <div class="copyright">
-                    地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
-                    京ICP备08001421号京公网安备110108007702
+                    地址: 重庆市南岸区南山街道崇文路重庆邮电大学 邮编：400065 电话：400-618-**** 传真：010-8293**** 邮箱: Jeniluo@163.com
+                    &ensp;渝ICP备20210009425号渝公网安备*
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src='js/register.js'></script>
 </body>
 
 </html>

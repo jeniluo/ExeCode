@@ -15,6 +15,22 @@ eyes.onclick = function () {
     }
 }
 
+var li_lists = document.querySelector('.tab_list').querySelectorAll('li');
+var items = document.querySelector('.tab_content').querySelectorAll('.item');
+for (var i = 0; i < li_lists.length; i++) {
+    li_lists[i].setAttribute('data-index', i);
+    li_lists[i].onclick = function () {
+        for (var i = 0; i < li_lists.length; i++) {
+            li_lists[i].className = '';
+        }
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.display = 'none';
+        }
+        this.className = 'lis';
+        items[this.getAttribute('data-index')].style.display = 'block';
+    }
+}
+
 var no = document.querySelector('.no');
 var box1 = document.querySelector('.box1');
 no.onclick = function () {
@@ -114,5 +130,34 @@ for (var i = 0; i < hold_color.length; i++) {
     }
     hold_color[i].onmouseout = function () {
         this.style.backgroundColor = '#fff';
+    }
+}
+
+var node = document.querySelectorAll('.down_list');
+for (var i = 0; i < node.length; i++) {
+    node[i].onmouseover = function () {
+        this.children[0].style.display = 'block';
+    }
+    node[i].onmouseout = function () {
+        this.children[0].style.display = 'none';
+    }
+}
+
+var text_area = document.querySelector('#text_area');
+var btn_send = document.querySelector('.btn_send');
+var ul_show = document.querySelector('.ul_show');
+btn_send.onclick = function () {
+    var li = document.createElement('li');
+    ul_show.insertBefore(li, ul_show.children[0]);
+    if (text_area.value != '') {
+        li.innerHTML = text_area.value + "<a herf='javascript:void(0)'>删除</a>";
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                ul_show.removeChild(this.parentNode);
+            }
+        }
+    } else {
+        alert('你没有输入信息！');
     }
 }

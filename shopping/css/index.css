@@ -1,5 +1,13 @@
 /* 主页 */
 
+.img_png {
+    position: absolute;
+    display: none;
+    width: 54px;
+    height: 72px;
+    z-index: 1000;
+}
+
 .main {
     height: 455px;
     padding-top: 10px;

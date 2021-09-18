@@ -30,6 +30,74 @@ body {
     border-radius: 12px;
 }
 
+.node {
+    margin: 10px auto;
+    width: 400px;
+}
+
+.node ul li {
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+}
+
+.node ul li ul {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+.tab {
+    width: 1200px;
+    margin: 140px auto 0;
+}
+
+.tab .tab_list {
+    width: 1200px;
+    height: 40px;
+    background-color: #eee;
+    border: 1px solid #999;
+    /* box-sizing: border-box; */
+}
+
+.tab .tab_list li {
+    float: left;
+    width: 240px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tab .tab_list .lis {
+    background-color: #c81623;
+    color: #fff;
+}
+
+.tab .tab_content {
+    /* height: 200px; */
+    width: 1200px;
+    border: 1px solid #999;
+    border-top: none;
+    background-color: #fff;
+    /* border-radius: 0 0 30px 30px; */
+    text-align: center;
+}
+
+.tab .tab_content .item {
+    display: none;
+}
+
+.tab .tab_content .item {
+    /* height: 200px; */
+    /* line-height: 200px; */
+    font-size: 14px;
+}
+
 .box1 {
     position: relative;
     width: 60px;
@@ -134,4 +202,13 @@ body {
 
 .store .select_box, .store .son_select_box {
     width: 40px;
+}
+
+.ul_show li {
+    width: 200px;
+    margin: 10px auto;
+}
+
+.ul_show li a {
+    float: right;
 }

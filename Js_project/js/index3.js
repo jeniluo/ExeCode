@@ -87,4 +87,4 @@ img_show.addEventListener('mousemove', function (e) {
 
 (function (a) {
     console.log(a);
-})(1)
+})(1);

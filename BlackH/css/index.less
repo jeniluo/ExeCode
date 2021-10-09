@@ -1,0 +1,246 @@
+@basedFont: 75px;
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: @basedFont  !important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    // width: 10rem;
+    margin: 0 auto !important;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7 !important;
+    // height: 1000px;
+}
+
+.big-box1 {
+    background-color: #fff;
+    margin-bottom: .133333rem;
+
+    .header {
+        width: 100%;
+        height: 1.133333rem;
+        border-bottom: .013333rem solid #eaeaea;
+        text-align: center;
+        line-height: 1.133333rem;
+        font-size: .466667rem;
+        color: #1c1c1c;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 33.333333%;
+            display: flex;
+            height: 3.466667rem;
+            justify-content: center;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 1.853333rem;
+                    height: 1.853333rem;
+                }
+
+                p {
+                    font-size: .333333rem;
+                    margin-top: .16rem;
+                }
+            }
+        }
+    }
+
+    .go {
+        text-align: center;
+        padding: 0 .186667rem .573333rem .186667rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.common {
+    display: flex;
+    padding: .586667rem .306667rem;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    img {
+        width: .506667rem;
+        height: .506667rem;
+    }
+
+    p {
+        margin-left: .24rem;
+        font-size: .373333rem;
+        font-weight: 700;
+    }
+
+    span {
+        font-size: .293333rem;
+        margin-left: 6.213333rem;
+    }
+}
+
+.big-box2 {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: .133333rem;
+
+    .swiper-container {
+        width: 80%;
+        height: 6.133333rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.8);
+        opacity: 0.5;
+
+        img {
+            width: 4.506667rem;
+            height: 5.013333rem;
+            border-radius: .133333rem;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: .333333rem;
+            margin-top: .32rem;
+        }
+    }
+
+    // 当前选中的中心图片，改变在Z轴的优先值得到最高层级
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+        transform: scale(1);
+        z-index: 10000;
+        // 盒子透明度
+        opacity: 1;
+    }
+}
+
+.big-box3 {
+    background-color: #fff;
+    margin-bottom: .133333rem;
+    box-sizing: border-box;
+
+    .swiper-container_study {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-left: .293333rem;
+        box-sizing: border-box;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        padding: .133333rem 0;
+        box-sizing: border-box;
+        box-shadow: 0 0 .133333rem rgba(0, 0, 0, .1);
+        border-radius: .133333rem;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        margin: .133333rem .266667rem 1.733333rem 0;
+
+        img {
+            height: 2.28rem;
+            width: 98%;
+        }
+
+        h5 {
+            text-align: left !important;
+            padding: .133333rem .133333rem;
+        }
+
+        p {
+            text-align: left !important;
+            padding: .133333rem .133333rem;
+            font-size: .213333rem;
+            color: #999;
+
+            span {
+                color: #FF4400
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 10rem;
+    display: flex;
+    padding: .266667rem 0;
+    background-color: #fff;
+    z-index: 20000;
+
+    li {
+        flex: .25;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: .533333rem;
+                height: .533333rem;
+            }
+
+            p {
+                font-size: .293333rem;
+                color: #666;
+                margin-top: .146667rem;
+            }
+        }
+    }
+}

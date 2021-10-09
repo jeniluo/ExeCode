@@ -1,0 +1,206 @@
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto !important;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f4f7 !important;
+}
+.big-box1 {
+  background-color: #fff;
+  margin-bottom: 0.133333rem;
+}
+.big-box1 .header {
+  width: 100%;
+  height: 1.133333rem;
+  border-bottom: 0.013333rem solid #eaeaea;
+  text-align: center;
+  line-height: 1.133333rem;
+  font-size: 0.466667rem;
+  color: #1c1c1c;
+}
+.big-box1 .nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.big-box1 .nav li {
+  width: 33.333333%;
+  display: flex;
+  height: 3.466667rem;
+  justify-content: center;
+}
+.big-box1 .nav li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.big-box1 .nav li a img {
+  width: 1.853333rem;
+  height: 1.853333rem;
+}
+.big-box1 .nav li a p {
+  font-size: 0.333333rem;
+  margin-top: 0.16rem;
+}
+.big-box1 .go {
+  text-align: center;
+  padding: 0 0.186667rem 0.573333rem 0.186667rem;
+}
+.big-box1 .go img {
+  width: 100%;
+}
+.common {
+  display: flex;
+  padding: 0.586667rem 0.306667rem;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.common img {
+  width: 0.506667rem;
+  height: 0.506667rem;
+}
+.common p {
+  margin-left: 0.24rem;
+  font-size: 0.373333rem;
+  font-weight: 700;
+}
+.common span {
+  font-size: 0.293333rem;
+  margin-left: 6.213333rem;
+}
+.big-box2 {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 0.133333rem;
+}
+.big-box2 .swiper-container {
+  width: 80%;
+  height: 6.133333rem;
+}
+.big-box2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 300ms;
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.big-box2 .swiper-slide img {
+  width: 4.506667rem;
+  height: 5.013333rem;
+  border-radius: 0.133333rem;
+  overflow: hidden;
+}
+.big-box2 .swiper-slide p {
+  font-size: 0.333333rem;
+  margin-top: 0.32rem;
+}
+.big-box2 .swiper-slide-active,
+.big-box2 .swiper-slide-duplicate-active {
+  transform: scale(1);
+  z-index: 10000;
+  opacity: 1;
+}
+.big-box3 {
+  background-color: #fff;
+  margin-bottom: 0.133333rem;
+  box-sizing: border-box;
+}
+.big-box3 .swiper-container_study {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 0.293333rem;
+  box-sizing: border-box;
+}
+.big-box3 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  padding: 0.133333rem 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.133333rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.133333rem;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0.133333rem 0.266667rem 1.733333rem 0;
+}
+.big-box3 .swiper-slide img {
+  height: 2.28rem;
+  width: 98%;
+}
+.big-box3 .swiper-slide h5 {
+  text-align: left !important;
+  padding: 0.133333rem 0.133333rem;
+}
+.big-box3 .swiper-slide p {
+  text-align: left !important;
+  padding: 0.133333rem 0.133333rem;
+  font-size: 0.213333rem;
+  color: #999;
+}
+.big-box3 .swiper-slide p span {
+  color: #FF4400;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 10rem;
+  display: flex;
+  padding: 0.266667rem 0;
+  background-color: #fff;
+  z-index: 20000;
+}
+footer li {
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer li a img {
+  width: 0.533333rem;
+  height: 0.533333rem;
+}
+footer li a p {
+  font-size: 0.293333rem;
+  color: #666;
+  margin-top: 0.146667rem;
+}

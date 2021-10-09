@@ -66,7 +66,7 @@ nav_to.addEventListener('click', function (e) {
 window.setInterval(function () { }, 1000); // 一次开启永不停歇，后面的事件就是再次执行的间隔时间
 
 // var inputTime = +new Date(set_stopTime);
-var inputTime = +new Date('2021-9-20 00:00:00');
+var inputTime = +new Date('2021-10-20 00:00:00');
 var time_boxs = document.querySelectorAll('.time_box');
 function countDown(time) {
     var nowTime = +new Date();

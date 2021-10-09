@@ -1,0 +1,115 @@
+// 导入样式less文件，建议直接在html中使用link调用样式文件
+// rem是根据HTML的font-size大小动态设置的，这里定义只是一个基本值，会随屏幕大小而改变
+// @import "common";
+@baseFont: 75px;
+@border: (1rem / @baseFont) solid #eee;
+@border-radius: (10rem / @baseFont);
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: @baseFont  !important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    // transition: all .5s linear;
+}
+
+.search_content {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 10rem;
+    height: (88rem / @baseFont);
+    background-color: #FFC001;
+    // transition: all .5s linear;
+
+    .search {
+        flex: 1;
+        height: (88rem / @baseFont);
+        padding: (10rem / @baseFont) 0rem;
+        box-sizing: border-box;
+
+        input {
+            display: block;
+            height: 100%;
+            width: 100%;
+            border: @border;
+            border-radius: (68rem / @baseFont / 2);
+            padding: (10rem / @baseFont) (40rem / @baseFont);
+            box-sizing: border-box;
+            font-size: (24rem / @baseFont);
+            background-color: #FFF2CC;
+            color: #757575;
+        }
+    }
+
+    .classfiy,
+    .login {
+        display: flex;
+        width: (50rem / @baseFont);
+        height: (70rem / @baseFont);
+        margin: (10rem / @baseFont) (25rem / @baseFont);
+        justify-content: center;
+    }
+
+    .classfiy {
+        background: url('../images/classify.png') no-repeat;
+        background-size: 90% auto;
+    }
+
+    .login {
+        font-size: (16rem / @baseFont);
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+}
+
+.banner img {
+    width: (750rem / @baseFont);
+    height: (368rem / @baseFont);
+}
+
+.ad {
+    display: flex;
+    width: 100%;
+
+    a {
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        width: (150rem / @baseFont);
+        height: (140rem / @baseFont);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: (25rem / @baseFont);
+        padding: (10rem / @baseFont);
+
+        img {
+            width: (82rem / @baseFont);
+            height: (82rem / @baseFont);
+        }
+    }
+}

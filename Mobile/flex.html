@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Flex布局</title>
+    <!-- 初始化页面 -->
+    <link rel="stylesheet" href="css/Initialize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/flex.css">
+</head>
+
+<body>
+    <!-- 顶部栏 -->
+    <header>
+        <input type="search" placeholder="搜索：目的地/酒店/景点/航班">
+        <div class="my">
+            <div class="my_head"></div>
+        </div>
+
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="upload/focus.jpg" alt="focus.jpg">
+    </div>
+
+    <!-- local-nav -->
+    <div class="local_nav">
+        <li><a href="#"><span class="local_nav_icon"></span><span class="local_nav_title"></span></a></li>
+        <li><a href="#"><span class="local_nav_icon"></span><span class="local_nav_title"></span></a></li>
+        <li><a href="#"><span class="local_nav_icon"></span><span class="local_nav_title"></span></a></li>
+        <li><a href="#"><span class="local_nav_icon"></span><span class="local_nav_title"></span></a></li>
+        <li><a href="#"><span class="local_nav_icon"></span><span class="local_nav_title"></span></a></li>
+    </div>
+
+    <!-- 主导航栏 -->
+    <div class="nav">
+        <div class="nav_common" style="background: -webkit-linear-gradient(left, #FA5A55, #FA994D);">
+            <div class="nav_common_items">
+                <a href="#">酒店</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">海外酒店</a>
+                <a href="#">特价酒店</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">团购</a>
+                <a href="#">名宿·客栈</a>
+            </div>
+        </div>
+        <div class="nav_common" style="background: -webkit-linear-gradient(left, #4B90ED, #53BCED);">
+            <div class="nav_common_items">
+                <a href="#">机票</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">火车票</a>
+                <a href="#">特价机票</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">汽车票·船票</a>
+                <a href="#">专车·租车</a>
+            </div>
+        </div>
+        <div class="nav_common" style="background: -webkit-linear-gradient(left, #34C2A9, #6CD559);">
+            <div class="nav_common_items">
+                <a href="#">旅游</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">门票</a>
+                <a href="#">目的地攻略</a>
+            </div>
+            <div class="nav_common_items">
+                <a href="#">邮轮旅行</a>
+                <a href="#">定制旅行</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 侧导航栏 -->
+    <div class="subnav_entry">
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+        <li><a href="#"><span class="subnav_icon"></span><span class="subnav_title"></span></a></li>
+    </div>
+
+    <!-- 热门活动 -->
+    <div class="sales_box">
+        <div class="sales_hd">
+            <a href="#">获取更多福利</a>
+        </div>
+        <div class="sales_bd">
+            <div class="top"><a href="" style="border-right: 1px solid #eee;"><img src="upload/pic1.jpg"
+                        alt="pic1.jpg"></a><a href=""><img src="upload/pic2.jpg" alt="jpg2.jpg"></a></div>
+            <div class="cen"><a href="" style="border-right: 1px solid #eee;"><img src="upload/pic3.jpg"
+                        alt="pic3.jpg"></a><a href=""><img src="upload/pic4.jpg" alt="jpg4.jpg"></a></div>
+            <div class="bot"><a href="" style="border-right: 1px solid #eee;"><img src="upload/pic5.jpg"
+                        alt="pic5.jpg"></a><a href=""><img src="upload/pic6.jpg" alt="jpg6.jpg"></a></div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <a href=""><span class="footer_icon"></span><span class="footer_title">电话预定</span></a>
+        <a href=""><span class="footer_icon"></span><span class="footer_title">下载客户端</span></a>
+        <a href=""><span class="footer_icon"></span><span class="footer_title">我的</span></a>
+    </footer>
+
+    <!-- 其他 -->
+    <div class="other">
+        <div class="other_top">
+            <li><a href="#">网站地图 &ensp;</a>|</li>
+            <li><a href="#">&ensp; Language &ensp;</a>|</li>
+            <li><a href="#">&ensp; 电脑版</a></li>
+        </div>
+        <div class="other_bottom">
+            <li><a href="#">@携程旅行 &ensp;</a>|</li>
+            <li><a href="#">&ensp; 沪ICP备08023580号</a></li>
+        </div>
+    </div>
+
+    <script src="js/flex.js"></script>
+</body>
+
+</html>

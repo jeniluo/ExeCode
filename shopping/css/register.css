@@ -88,6 +88,11 @@
     line-height: 15px;
 }
 
+.reg_form li:nth-child(6) {
+    display: flex;
+    align-items: center;
+}
+
 .reg_form>button {
     margin-top: 40px;
     margin-left: 150px;

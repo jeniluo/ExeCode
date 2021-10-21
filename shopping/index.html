@@ -20,9 +20,9 @@
     <script src="js/index_jQuery.js"></script>
     <img src="images/guo.png" alt="" class="img_png">
     <!-- 回到顶部 -->
-    <div class="Totop"><a href="#Top"></a></div>
+    <div class="Totop"><a href="javascript:void(0)"></a></div>
     <!-- 快捷导航 -->
-    <a href="#" name="Top"></a>
+    <!-- <a href="#" name="Top"></a> -->
     <div class="shortcut">
         <div class="w">
             <div class="flowleft">
@@ -38,10 +38,11 @@
                 </div>
                 <ul>
                     <li>品优购欢迎你!&ensp;</li>
-                    <li><a href="#">登录</a>
+                    <li><a href="login.html" target="_blank">登录</a>
                         <a href="register.html" class="style_red" target="_blank">免费注册</a>
                         <a href="https://github.com/jeniluo/ExeCode/tree/master/shopping" target="_blank"
                             style="color:rgb(228, 94, 17);">&lt;--源码地址--&gt;</a>
+                        <p class="key_flow">关闭/开启跟随</p>
                         <p id="know" style="display: block; cursor: pointer;"></p>
                         <p id="know1" style="display: none; cursor: pointer;"></p>
                     </li>
@@ -128,12 +129,16 @@
     <div class="main w">
         <div class="focus">
             <div class="box" id="nav_box"></div>
+            <!-- 小圆点 -->
+            <ol class="circle">
+
+            </ol>
             <!-- 侧边栏 -->
             <div class="leftnav">
                 <ul>
-                    <li><a href="#Electrical_appliances">家用电器</a></li>
-                    <li><a href="#Phone">手机通讯</a></li>
-                    <li><a href="#Pc">电脑办公</a></li>
+                    <li class="Electrical_appliances"><a href="javascript:void(0)">家用电器</a></li>
+                    <li class="Phone"><a href="javascript:void(0)">手机通讯</a></li>
+                    <li class="Pc"><a href="javascript:void(0)">电脑办公</a></li>
                     <li><a href="#">家居家具</a></li>
                     <li><a href="#">生活用品</a></li>
                     <li><a href="#">运动户外</a></li>
@@ -216,7 +221,11 @@
     </div>
     <!-- 推荐 -->
     <div class="recomand w">
-        <div class="recom_hd"></div>
+        <div class="recom_hd">
+            <div class="time_box"></div>
+            <div class="time_box"></div>
+            <div class="time_box"></div>
+        </div>
         <div class="recom_bd">
             <ul>
                 <li><a href="#"><img src="upload/recom1.png" alt=""></a></li>
@@ -335,7 +344,6 @@
         </div>
     </div>
     <!-- 家用电器 -->
-    <a href="#" name="Electrical_appliances"></a>
     <div class="Co w">
         <div class="Co_hd">
             <h3>家用电器</h3>
@@ -404,7 +412,6 @@
         </ul>
     </div>
     <!-- 手机通讯 -->
-    <a href="#" name="Phone"></a>
     <div class="Co w">
         <div class="Co_hd">
             <h3>手机通讯</h3>
@@ -473,7 +480,6 @@
         </ul>
     </div>
     <!-- 电脑办公 -->
-    <a href="#" name="Pc"></a>
     <div class="Co w">
         <div class="Co_hd">
             <h3>电脑办公</h3>
@@ -663,7 +669,7 @@
                 </div><br>
                 <div class="copyright">
                     地址: 重庆市南岸区南山街道崇文路重庆邮电大学 邮编：400065 电话：400-618-**** 传真：010-8293**** 邮箱: Jeniluo@163.com
-                    &ensp;渝ICP备20210009425号渝公网安备*
+                    &ensp;渝ICP备20210009425号
                 </div>
             </div>
         </div>

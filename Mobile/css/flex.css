@@ -250,7 +250,7 @@ header::before {
 
 .sales_hd a::after {
     position: absolute;
-    top: 7px;
+    top: 4px;
     right: 10px;
     height: 7px;
     width: 7px;

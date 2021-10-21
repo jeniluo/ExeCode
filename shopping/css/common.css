@@ -21,6 +21,10 @@
     position: relative;
 }
 
+.key_flow {
+    cursor: pointer;
+}
+
 .flowright {
     float: right;
 }
@@ -245,6 +249,7 @@
     font-size: 14px;
     color: #fff;
     padding: 0 5px 0 10px;
+    transition: all .3s linear;
 }
 
 .nav .dropdown .dd ul li a::after {

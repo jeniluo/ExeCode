@@ -88,3 +88,74 @@ img_show.addEventListener('mousemove', function (e) {
 (function (a) {
     console.log(a);
 })(1);
+
+var sliderBar = document.querySelector('.slider_bar');
+var banner = document.querySelector('.banner');
+var bannerTop = banner.offsetTop;
+sliderBar.style.top = bannerTop + 50 + 'px';
+document.addEventListener('scroll', function () {
+    if (window.pageYOffset >= bannerTop) {
+        sliderBar.style.position = 'fixed';
+        sliderBar.style.top = 50 + 'px';
+        document.querySelector('.slider_bar_a').style.display = 'block';
+    } else {
+        var bannerTop_change = banner.offsetTop;
+        sliderBar.style.position = 'absolute';
+        sliderBar.style.top = bannerTop_change + 50 + 'px';
+        document.querySelector('.slider_bar_a').style.display = 'none';
+    }
+});
+
+document.querySelector('.slider_bar_a').addEventListener('click', function () {
+    window.pageYOffset = 0;
+});
+
+var sport = document.querySelector('.sport');
+var stop_sport = document.querySelector('.stop_sport');
+/* var sport_timeer = setInterval(function () {
+    var top = Math.floor(Math.random() * (500 - 0 + 1)) + 0;
+    var left = Math.floor(Math.random() * (500 - 0 + 1)) + 0;
+    sport.style.top = top + 'px';
+    sport.style.left = left + 'px';
+}, 100); */
+
+
+// 动画函数封装
+function annimation(obj, max, min, fun_do) {
+    obj.timer = setInterval(function () {
+        var top = Math.floor(Math.random() * (max - min + 1)) + min;
+        var left = Math.floor(Math.random() * (max - min + 1)) + min;
+        obj.style.top = top + 'px';
+        obj.style.left = left + 'px';
+        if (top == 250 && fun_do) {
+            obj.style.backgroundColor = 'red';
+            fun_do();
+        }
+    }, 100);
+}
+annimation(sport, 500, 0, function () {
+    console.log('111');
+});
+var i = 0;
+stop_sport.addEventListener('click', function () {
+    if (i == 0) {
+        clearInterval(sport.timer);
+        i++;
+    } else {
+        annimation(sport, 500, 0);
+        i--;
+    }
+});
+
+var go = document.querySelector('.go');
+var go_show = document.querySelector('.go_show');
+go.addEventListener('mouseenter', function () {
+    animate(go_show, 0, function () {
+        go.innerHTML = '⬅';
+    })
+});
+go.addEventListener('mouseout', function () {
+    animate(go_show, -150, function () {
+        go.innerHTML = '➡';
+    })
+});

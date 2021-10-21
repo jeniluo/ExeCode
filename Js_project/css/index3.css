@@ -3,7 +3,7 @@
     display: none;
     width: 54px;
     height: 72px;
-    z-index: 1001;
+    z-index: 10001;
 }
 
 .father {
@@ -38,8 +38,10 @@
 }
 
 body {
+    /* position: relative; */
     /* background-color: rgba(0, 0, 0, .2); */
     background-color: #fff;
+    height: 3000px;
 }
 
 .login_jump_box {
@@ -159,4 +161,72 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.banner {
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    background-color: rosybrown;
+}
+
+.slider_bar {
+    position: absolute;
+    /* top: 700px; */
+    right: 200px;
+    width: 50px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: plum;
+}
+
+.slider_bar_a {
+    display: none;
+}
+
+.sport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc00;
+}
+
+.stop_sport {
+    position: absolute;
+    top: 510px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    transform: translate(-50%, 0);
+}
+
+.go {
+    position: absolute;
+    top: 550px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #eee;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.go_show {
+    display: block;
+    position: absolute;
+    top: 550px;
+    left: -150px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #eee;
 }

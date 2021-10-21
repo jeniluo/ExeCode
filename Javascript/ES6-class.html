@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Initialize.css">
+    <link rel="stylesheet" href="css/ES6.css">
+</head>
+
+<body>
+    <div class="box" id="tab">
+        <div class="headnav">
+            <ul>
+                <li><span class="title">2</span><span class="close">X</span></li>
+                <li><span class="title">5</span><span class="close">X</span></li>
+            </ul>
+            <div class="add_more">+</div>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li><span class="con">3</span></li>
+                <li><span class="con">4</span></li>
+            </ul>
+        </div>
+    </div>
+    <button>点击</button>
+
+    <script src="js/ES6.js"></script>
+    <!-- <script>
+        var that;
+        class Star {
+            // constructor可以返回函数，自己调用执行
+            // 每个函数都不需要添加function，都不需要逗号分隔
+            constructor(name, age, songs) {
+                // constructor中的this指向的是创建的实例对象
+                // that = this解决this的指向问题
+                that = this;
+                this.name = name;
+                this.age = age;
+                this.songs = songs;
+                this.sing();
+                this.btn = document.querySelector('button');
+                this.btn.onclick = this.sing;
+            };
+            sing() {
+                // 方法中的this指向方法的调用对象
+                console.log('会唱' + that.songs)
+            };
+        };
+
+        var ldh = new Star('刘德华', 18, '冰雨');
+        ldh.sing('冰雨');
+        console.log(ldh);
+
+        // 类的继承
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            };
+            Sum() {
+                console.log(this.x + this.y);
+            };
+            say() {
+                return '我是爸爸';
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                // 利用super向父类传递子类的参数，利用super调用父类的普通函数，super需要先调用后使用参数（super在this前）
+                super(x, y);
+            };
+            say() {
+                console.log(super.say() + '的儿子')
+            }
+        }
+        class son1 extends Father {
+            constructor(x, y) {
+                super(x, y);
+                this.x = x;
+                this.y = y;
+            }
+            subtract() {
+                console.log(this.x - this.y);
+            }
+        }
+        var son = new Son(1, 2)
+        son.Sum();
+        son.say();
+        var son_1 = new son1(100, 10);
+        son_1.subtract();
+        son_1.Sum();
+    </script> -->
+</body>
+
+</html>

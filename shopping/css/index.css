@@ -5,7 +5,7 @@
     display: none;
     width: 54px;
     height: 72px;
-    z-index: 1000;
+    z-index: 10005;
 }
 
 .main {
@@ -19,7 +19,31 @@
     height: 455px;
     width: 720px;
     margin: 0 10px 0 220px;
-    background: url("../upload/focus.png") no-repeat;
+    /* background: url("../upload/focus.png") no-repeat; */
+}
+
+.main .focus .circle {
+    position: absolute;
+    left: 360px;
+    bottom: 20px;
+    z-index: 10003;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    background-color: rgba(238, 251, 252, .3);
+}
+
+.main .focus .circle li {
+    float: left;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.main .focus .circle li:nth-child(1) {
+    margin: 0;
 }
 
 .main .focus .box {
@@ -28,8 +52,10 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #c81623;
-    display: none;
+    background-color: transparent;
+    display: block;
+    background: url("../upload/focus.png") no-repeat;
+    transition: all .3s linear;
 }
 
 /* 侧边栏 */
@@ -170,10 +196,36 @@
 }
 
 .recomand .recom_hd {
+    position: relative;
     float: left;
     width: 205px;
     height: 163px;
+    padding: 132px 41px 0 41px;
+    box-sizing: border-box;
     background: url("../images/recom.png") no-repeat center center #5c5251;
+}
+
+.recomand .recom_hd::after {
+    position: absolute;
+    top: 147px;
+    left: 0;
+    content: '';
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.recomand .recom_hd .time_box {
+    float: left;
+    text-align: center;
+    line-height: 31px;
+    font-size: 28px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    width: 31px;
+    height: 31px;
+    background-color: #000;
+    color: #fff;
 }
 
 .recomand .recom_bd {

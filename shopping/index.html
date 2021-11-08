@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
     <script src="js/index_jQuery.js"></script>
     <img src="images/guo.png" alt="" class="img_png">
     <!-- 回到顶部 -->
-    <div class="Totop"><a href="javascript:void(0)"></a></div>
+    <div class="Totop"><a href="javascript:void(0)" title="回到顶部"></a></div>
     <!-- 快捷导航 -->
     <!-- <a href="#" name="Top"></a> -->
     <div class="shortcut">
@@ -72,15 +73,9 @@
                 <button class="button">搜索</button>
             </form>
         </div>
-        <div class="hotwords">
+        <div class="hotwords" id="hotwords">
             <ul>
-                <li><a href="#">优惠购首发</a></li>
-                <li><a href="#">亿元优惠</a></li>
-                <li><a href="#">9.9元团购</a></li>
-                <li><a href="#">每满99减30</a></li>
-                <li><a href="#">办公用品</a></li>
-                <li><a href="#">电脑</a></li>
-                <li><a href="#">通信</a></li>
+                <li><a href="#" v-for="item in hotwords_list">{{item}}</a></li>
             </ul>
         </div>
         <a class="shopcar" href="#" target="#">我的购物车</a>

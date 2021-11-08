@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键字</title>
+</head>
+
+<body>
+
+    <div class="Fa">
+        <div>11</div>
+        <div>11</div>
+        <div>11</div>
+        <div>11</div>
+        <div>11</div>
+        <div>11</div>
+    </div>
+
+    <script>
+        // let声明的变量具有块级作用域，var是没有这个特性的
+        // 防止变量因为循环变成全局变量
+        /* if (true) {
+            let a = 0;
+        }
+        console.log(a); */
+        // let声明的变量不存在变量提升情况
+        /* console.log(b);
+        let b = 100; */
+        // 暂时性死区，在函数体内部的变量和外部的变量么有关系
+        /* var num = 100;
+        if (true) {
+            console.log(num);
+            let num;
+        } */
+
+        // const块级作用域，声明的时候必须需要赋初值，赋值后不能更改(值得内存不能更改)
+        // 对于复杂数据类型中得值是可以更改得，例如数组中得值，但是不能重新赋值数组（地址）
+        /* if (1) {
+            const a = 10;
+            console.log(a);
+        }
+        console.log(a); */
+
+        const obj = {
+            name: 'zhangsan'
+        };
+
+        function fn() {
+            console.log(this);
+            return () => {
+                console.log(this);
+            }
+        }
+        var f1 = fn.call(obj);
+        f1();
+
+        // 剩余参数，在形参前面加上...就可以把其作为数组进行接收，ES6中没有
+        const sum = (...arg) => {
+            let all = 0;
+            arg.forEach(function (item) {
+                all += item;
+            });
+            return all;
+        }
+        console.log(sum(20, 30));
+        // 剩余参数和结构的配合使用
+        let name_arr = ['zhangsan', 'lishi', 'wangwu'];
+        let [s1, ...s2] = name_arr;
+        console.log(s2);
+        // ...是将数组中的每一项以逗号分开打印，逗号在打印的时候就是参数分隔符使用
+        console.log(...name_arr)
+        // 这样一来s1接收第一个，s2接收的是后面的所有参数
+        // 使用剩余参数合并数组
+        let a1 = [1, 2, 3];
+        let a2 = [4, 5, 6];
+        // 用push将多个数字放入一个数组后面
+        a1.push(...a2);
+        let a3 = [...a1, ...a2];
+        console.log(a3);
+
+        // 利用扩展运算符将伪数组转换为真正的的数组
+        var fa_son = document.querySelector('.Fa').querySelectorAll('div');
+        console.log(fa_son);
+        var fa_son_new = [...fa_son];
+        console.log(fa_son_new);
+
+        // array.from(array)，将伪数组转换为真数组
+        let arrayLike = {
+            '0': 4,
+            '1': 9,
+            '2': 10,
+            length: 3
+        }
+        // 在from(array, function(){} / ()=>{})中传递参数（函数）来将数组中每一项进行操作
+        let arrayTrue = Array.from(arrayLike, item => item * 2);
+        console.log(arrayTrue);
+        // find()查找参数存在返回对象，不存在返回undefined
+        console.log(arrayTrue.find(item => item == 20));
+        // findIndex()查找数组中第一个满足条件的值的索引，以下返回索引值 1
+        console.log(arrayTrue.findIndex(item => item >= 10));
+        // array.includes(值)返回 Boolean值
+        console.log(arrayTrue.includes(8));
+        console.log(arrayTrue.indexOf(8)); // 返回值的索引，没有返回-1
+        // 模板字符串 ` ` 键盘1的左边，使用 ${}进行调用，可调用函数${fn()}，对象${Object.name}
+        let allKnow = `what's up?`;
+        console.log(`${allKnow} 你这瓜皮金子做的，还是瓜粒金子做的啊？`);
+        // String 的扩展方法 startsWith() endsWith() 返回Boolean值
+        let str = 'Hello the world!';
+        console.log(str.startsWith('Hello'), str.endsWith('!'));
+        // str.repeat(times)重复times次
+        console.log(str.replace('Hello', 'fuck', 0)); // 返回新字符串，不会改变源字符串
+        console.log(str.repeat(2));
+
+        // 数据结构Set，类似于数组，但是成员是唯一的
+        const s = new Set([1, 2, 2, 2, 23, 3, 4]);
+        console.log(s);
+        console.log(s.size);
+        // Set的方法 add(), delete(), has(), clear()分别是添加，删除boolean，是否有boolean，清除
+        s.add(123);
+        s.delete(23);
+        console.log(s.has(3));
+        console.log(s);
+        // s.clear();
+        console.log(s);
+        // Set的遍历forEach
+        s.forEach(item => {
+            console.log(item);
+        });
+    </script>
+
+</body>
+
+</html>

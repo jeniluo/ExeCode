@@ -25,19 +25,43 @@
             <div class="login">已有帐号，去<a href="login.html" style="color: #c81623;">登陆</a></div>
         </h3>
         <form action="register.php" class="reg_form">
-            <li><label for="">手机号：</label><input type="tel" required="required" placeholder="请输入11位手机号码"><button
-                    style="margin-left: 10px; height: 30px; line-height: 30px;">获取验证码</button></li>
-            <li><label for="">短信验证码：</label><input type="text" required="required" placeholder="请输入6位验证码"></li>
-            <li><label for="">邮箱：</label><input type="email" placeholder="example@example.com" required="required"></li>
-            <li class="password_box"><label for="">登陆密码：</label><input type="password" placeholder="6-16位，包含大小写数字下划线等"
-                    class="password" required="required"><img src="images/close.png" alt="" id="eyes">
-                <div class="hint"><img src="" alt="" class="error_img"><span class="error"></span></div>
+            <li>
+                <label for="">手机号：</label>
+                <input type="tel" class="tel" placeholder="请输入11位手机号码">
+                <button style="margin-left: 10px; height: 30px; line-height: 30px;" disabled
+                    class="verify">获取验证码</button>
             </li>
-            <li><label for="">再次输入登陆密码：</label><input type="password" class="password_again">
-                <div class="hint"><img src="" alt="" class="error_img_again"><span class="error_again"></span></div>
+            <li>
+                <label for="">短信验证码：</label>
+                <input type="text" placeholder="请输入6位验证码" class="check_verify">
             </li>
-            <li><label for=""></label><input type="checkbox" checked="checked" class="xieyi"><span>同意协议并注册 </span><a
-                    href="#" style="color: #1ba1e6;">《品优购用户协议》</a> </li>
+            <li>
+                <label for="">邮箱：</label>
+                <input type="email" placeholder="example@example.com" class="email">
+                <div class="hint">
+                    <img src="" alt="" class="error_img_email"><span class="error_email"></span>
+                </div>
+            </li>
+            <li class="password_box">
+                <label for="">登陆密码：</label>
+                <input type="password" placeholder="6-16位，包含大小写数字下划线等" class="password"><img src="images/close.png"
+                    alt="" id="eyes">
+                <div class="hint">
+                    <img src="" alt="" class="error_img"><span class="error"></span>
+                </div>
+            </li>
+            <li>
+                <label for="">再次输入登陆密码：</label>
+                <input type="password" class="password_again">
+                <div class="hint">
+                    <img src="" alt="" class="error_img_again"><span class="error_again"></span>
+                </div>
+            </li>
+            <li>
+                <label for=""></label>
+                <input type="checkbox" checked="checked" class="xieyi"><span>同意协议并注册 </span><a href="#"
+                    style="color: #1ba1e6;">《品优购用户协议》</a>
+            </li>
             <button type="submit">完成注册</button>
         </form>
     </div>

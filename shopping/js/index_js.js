@@ -146,3 +146,13 @@ function countDown(time) {
 }
 countDown(); // 提前调用一次，避免刷新页面的空白数据
 window.setInterval(countDown, 1000);
+
+const data_gather = {
+    data() {
+        return {
+            hotwords_list: ['优惠购首发', '亿元优惠', '9.9元团购', '每满99减30', '办公用品', '电脑', '通信'],
+            dd_list: ['电脑、办公', '家居、家具、家装、厨具', '男装、女装、童装、内衣', '个户化妆、清洁用品、宠物', '鞋靴、箱包、珍宝、奢侈品', '运动户外、钟表', '汽车、汽车用品', '母婴、玩具乐器', '食品、酒类、生鲜、特产', '医药保健', '图书、音像、电子书', '彩票、旅行、充值、票务', '理财、众筹、白条、保险'],
+        }
+    }
+};
+Vue.createApp(data_gather).mount("#hotwords");

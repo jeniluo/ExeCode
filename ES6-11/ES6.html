@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+    <style>
+        /* let */
+        .container {
+            overflow: hidden;
+        }
+
+        .item {
+            float: left;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 1px solid #eee;
+            margin-right: 10px;
+        }
+
+        /* 箭头函数 */
+        .jianTou {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- let -->
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <!-- 箭头函数 -->
+    <div class="jianTou"></div>
+
+    <script>
+        // let
+        let items = document.querySelectorAll('.item');
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener('click', function () {
+                items[i].style.backgroundColor = 'pink';
+            })
+        }
+
+        // 语法简写
+        let name = 'ES6';
+        let change = () => {
+            console.log('we can change you');
+        };
+        let whatWeDo = {
+            name,
+            change,
+            improve() {
+                console.log('we can make you do more better!');
+            }
+        };
+        whatWeDo.improve();
+
+        // 箭头函数点击变色
+        let jianTou = document.querySelector('.jianTou');
+        jianTou.addEventListener('click', function () {
+            setTimeout(() => {
+                this.style.backgroundColor = 'pink';
+            }, 2000);
+        });
+        const arrNum = [12, 33, 78, 72, 43, 90];
+        console.log(arrNum.filter(item => item % 2 === 0));
+    </script>
+</body>
+
+</html>

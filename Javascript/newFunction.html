@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数进阶</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <ul class="nav">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <input type="text" placeholder="输入">
+
+    <script>
+        'use strict';
+        // num = 10; 报错，因为在严格模式下
+        // 严格模式下也不能随意删除声明好的变量
+        var f = Function('a', 'b', 'console.log(a + b)');
+        f(1, 2);
+
+        var lis = document.querySelector('.nav').querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            // 立即执行函数是一个小闭包，在立即执行函数中的每一个函数都可以使用变量i
+            (function (i) {
+                lis[i].addEventListener('click', function () {
+                    console.log(i);
+                });
+            })(i);
+        };
+
+
+        // 正则表达式（构造函数）
+        var password = new RegExp(/123/);
+        // 正则表达式（字面量）
+        // var rg = /^abc$/; 需要abc开头和结尾才能
+        // 正则的或者只有一条竖线 | 
+        // var rg = /[0-9a-z_.?!]/; 出现任意一个就满足，字符类[]，短横线表示范围
+        // var rg = /^[0-9a-zA-Z_.?!]$/; 范围内选择一个，多选一
+        // var rg = /^[0-9a-zA-Z_-]{6,16}$/; 6-16位符合中括号内字符就满足，量词中间不能有空格
+        // var rg = /^[^0-9a-zA-Z_-]{6,16}$/; 中括号里面的^符号是不允许包含的意思
+        // *允许字符出现多少次(0,∞)，+表示出现(1,∞)，?表示出现1或则0次，{3}重复3次，{3,}大于等于3次，{3,5}出现3到5次
+        var rg = /^[0-9a-zA-Z_-]{6,16}$/;
+        // 正则表达式测试符合与否 test
+        var input = document.querySelector('input');
+        input.addEventListener('focus', function () {
+            this.style.color = 'black';
+            this.select();
+        })
+        input.addEventListener('blur', function () {
+            if (rg.test(input.value)) {
+                console.log('输入正确！');
+                input.style.color = 'green';
+            } else {
+                console.log('输入错误！');
+                input.style.color = 'red';
+            }
+        });
+
+
+        var o = {
+            name: 'andy'
+        }
+
+        function fn(arr) {
+            console.log(this);
+            console.log(arr);
+        }
+        // 利用apply借助其他的方法
+        var arr = [1, 65, 32, 87, 42, 57, 3, 23];
+        console.log(Math.max.apply(Math, arr));
+        fn.apply(o, [1, 2])
+        // bind()不调用函数，但是可以改变this的指向，返回一个新的函数
+        // 不想立即调用，但又想改变函数的this的指向
+        var f = fn.bind(o);
+        f();
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            'use strict';
+            this.disabled = true;
+            setTimeout(function () {
+                this.disabled = false;
+            }.bind(this), 3000)
+        })
+        // 高阶函数
+        function fn() { // a, callback
+            var num = 10;
+            /* if (a >= 10) {
+                callback && callback();
+            } */
+            // 闭包函数
+            function fun() {
+                num++;
+                console.log(num)
+            }
+            return fun;
+        }
+        /* fn(20, function () {
+            console.log('大于10');
+        }) */
+        // fn外部作用域访问内部的函数
+        var f = fn();
+        f();
+
+        // 出租车计费
+        var car_cost = (function () {
+            var start = 13;
+            var all = 0;
+            return {
+                price: function (distance) {
+                    all = distance <= 3 ? start : (start + (distance - 3) * 5);
+                    return all;
+                },
+                yongd: function (flag) {
+                    all = flag ? all + 10 : all;
+                    return all;
+                }
+            }
+        })();
+        console.log(car_cost.price(5));
+        console.log(car_cost.yongd(false));
+
+        // 深拷贝与浅拷贝
+        var obj = {
+            name: 'andy',
+            id: 1,
+            msg: {
+                age: 18
+            },
+            sing: function () {
+                console.log('?');
+            }
+        }
+        var o = {}
+        var o1 = {}
+        for (var k in obj) {
+            o[k] = obj[k];
+        }
+        // console.log(o);
+        Object.assign(o, obj); // 浅拷贝（语法糖）
+
+        function deepCopy(old_obj, new_obj) {
+            for (var k in old_obj) {
+                // 注意：数组也是对象
+                if (old_obj[k] instanceof Array) {
+                    new_obj[k] = [];
+                    deepCopy(old_obj[k], new_obj[k]);
+                } else if (old_obj[k] instanceof Object) {
+                    new_obj[k] = {};
+                    deepCopy(old_obj[k], new_obj[k]);
+                } else {
+                    new_obj[k] = old_obj[k];
+                }
+            }
+        } // 深拷贝
+        deepCopy(obj, o1);
+        console.log(o1);
+
+        // 正则表达式
+    </script>
+
+</body>
+
+</html>

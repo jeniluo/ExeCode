@@ -33,7 +33,7 @@ close_btn.addEventListener('click', function (e) {
     show_login.style.display = 'none';
     body.style.backgroundColor = '#fff';
 });
-
+// 移动登录框
 document.querySelector('.top').addEventListener('mousedown', function (e) {
     var move_left = e.pageX - show_login.offsetLeft;
     var move_top = e.pageY - show_login.offsetTop;
@@ -46,7 +46,7 @@ document.querySelector('.top').addEventListener('mousedown', function (e) {
         document.removeEventListener('mousemove', move);
     });
 });
-
+// 查看放大图片
 var img_show = document.querySelector('.img_show');
 var mask = document.querySelector('.mask');
 var big_img_box = document.querySelector('.big_img_box');
@@ -88,7 +88,7 @@ img_show.addEventListener('mousemove', function (e) {
 (function (a) {
     console.log(a);
 })(1);
-
+// 上滑定位
 var sliderBar = document.querySelector('.slider_bar');
 var banner = document.querySelector('.banner');
 var bannerTop = banner.offsetTop;
@@ -105,7 +105,7 @@ document.addEventListener('scroll', function () {
         document.querySelector('.slider_bar_a').style.display = 'none';
     }
 });
-
+// 返回顶部
 document.querySelector('.slider_bar_a').addEventListener('click', function () {
     window.pageYOffset = 0;
 });

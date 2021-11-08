@@ -215,3 +215,35 @@ console.log(newArr);
 console.log(arr1.some(function (value, index, array) {
     return value >= 20; // 是否存在大于20的值
 }));
+
+const Test = {
+    data() {
+        return {
+            arr1: [1, 2, 3, 4]
+        }
+    }
+};
+Vue.createApp(Test).mount('#Test');
+
+var str34 = '  andy  ';
+console.log(str34.length);
+console.log(str34.trim().length);
+
+var obj = {
+    price: 1999,
+    s_name: 'xiaomi',
+    id: 1
+}
+Object.defineProperty(obj, 'num', {
+    value: 1000,
+    writable: true, // 允许修改与否
+})
+Object.defineProperty(obj, 'address', {
+    value: '重庆邮电大学',
+    writable: true, // 允许修改与否
+    enumerable: false, // 不会被遍历出来，默认为true
+    configurable: false // 不允许被删除被修改，默认为true
+})
+delete obj.address; // 删除对象中的属性
+console.log(obj);
+console.log(Object.keys(obj)); // 遍历对象中的关键字（属性）

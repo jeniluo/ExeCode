@@ -1,7 +1,7 @@
-.Father {
-    width: auto;
-    height: 900px;
-    background-image: url("../images/91147521_p0_master1200.jpg");
+img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 
 h1 {

@@ -7,26 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES6</title>
     <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
         /* let */
         .container {
+            width: 470px;
+            margin-top: 10px;
             overflow: hidden;
         }
 
         .item {
             float: left;
-            width: 100px;
+            width: 150px;
             height: 100px;
             box-sizing: border-box;
             border: 1px solid #eee;
             margin-right: 10px;
+            transition: all .5s linear;
+            border-radius: 60% / 60%;
         }
 
         /* 箭头函数 */
         .jianTou {
-            width: 100px;
+            width: 150px;
             height: 100px;
             background-color: aqua;
             margin-top: 10px;
+            transition: all .3s linear;
+            border-radius: 60% / 60%;
+            box-sizing: border-box;
+            border: 1px solid #eee;
+            color: rgb(200, 255, 127);
         }
     </style>
 </head>
@@ -36,20 +50,31 @@
     <div class="container">
         <div class="item"></div>
         <div class="item"></div>
-        <div class="item"></div>
+        <div class="item" style="margin-right: 0px;"></div>
     </div>
 
     <!-- 箭头函数 -->
     <div class="jianTou"></div>
 
     <script>
+        function randomNum(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
         // let
+        const colorList = ['skyblue', 'blue', 'yellow', 'green', 'pink', 'red', 'aqua', 'aquamarine',
+            'rgb(127, 219, 255)', 'rgb(200, 255, 127)'
+        ];
         let items = document.querySelectorAll('.item');
         for (let i = 0; i < items.length; i++) {
             items[i].addEventListener('click', function () {
                 items[i].style.backgroundColor = 'pink';
-            })
-        }
+                clearInterval();
+                setInterval(() => {
+                    let num = randomNum(colorList.length - 1, 0);
+                    this.style.backgroundColor = colorList[num];
+                }, 1000);
+            });
+        };
 
         // 语法简写
         let name = 'ES6';
@@ -70,10 +95,64 @@
         jianTou.addEventListener('click', function () {
             setTimeout(() => {
                 this.style.backgroundColor = 'pink';
-            }, 2000);
+            }, 1000);
+            setTimeout(() => {
+                this.style.backgroundColor = 'aqua';
+            }, 1500);
         });
+        setInterval(() => {
+            let num_jianTou = randomNum(colorList.length - 1, 0);
+            jianTou.style.backgroundColor = colorList[num_jianTou];
+        }, 1000);
         const arrNum = [12, 33, 78, 72, 43, 90];
         console.log(arrNum.filter(item => item % 2 === 0));
+
+        // 允许给函数赋初值，值靠后
+        function sum(a, b, c = 20) {
+            return a + b + c;
+        };
+        console.log(sum(10, 35));
+        // 与解构赋值结合
+        function connect({
+            username,
+            host,
+            password,
+            port
+        }) {
+            console.log(username, host, password, port);
+        };
+        connect({
+            username: 'root',
+            host: '192.168.1.1',
+            password: 'root',
+            port: 3068,
+        });
+
+        // rest(...args)来代替arguments
+        function data(...args) {
+            console.log(args);
+            // console.log(arguments);
+        };
+        data('woc', 'woq', 'wod', 'wdnmd');
+
+        // 运算符...
+        const TFboys = ['王源', '王俊凯', '易烊千玺'];
+        console.log(...TFboys);
+        // ...拼接字符串
+        const arrChar1 = ['xoxoxo', 'wowowo'];
+        const arrChar2 = ['qoqoqo', 'sososo'];
+        console.log([...arrChar1, ...arrChar2]);
+
+        // 基本数据类型 symbol，值唯一，不能运算 = - * /  > < 字符串拼接都不行
+        /* let s = Symbol();
+        console.log(s, typeof s);
+        let s1 = Symbol('尚硅谷');
+        console.log(s1);
+        let s2 = Symbol('尚硅谷');
+        console.log(s2); */
+        let s3 = Symbol.for('尚硅谷');
+        console.log(s3);
+        // symbol作用：创建对象的属性
     </script>
 </body>
 

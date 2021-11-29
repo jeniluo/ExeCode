@@ -153,6 +153,103 @@
         let s3 = Symbol.for('尚硅谷');
         console.log(s3);
         // symbol作用：创建对象的属性
+
+        // ES6迭代器
+        /* const xiYou = ['tangsheng', 'shunwukong', 'shasheng', 'zhubajie'];
+        console.log(xiYou); // 对象上有一个Symbol.iterator方法
+        console.log(xiYou[Symbol.iterator]().next());
+        for (let k of xiYou) {
+            console.log(k);
+        }; */
+        // 迭代器运用（for of）
+        const banji = {
+            name: '一班',
+            stus: ['zhangsan', 'lishi', 'wangmazi', 'kingwang', 'fangxi'],
+            // 自定义迭代器
+            [Symbol.iterator]() {
+                let index = 0;
+                return {
+                    next: () => {
+                        if (index < this.stus.length) {
+                            const res = {
+                                value: this.stus[index],
+                                done: false
+                            };
+                            index++;
+                            return res;
+                        } else {
+                            return {
+                                value: undefined,
+                                done: true
+                            };
+                        }
+                    }
+                };
+            }
+        };
+        for (let v of banji) {
+            console.log(v);
+        };
+
+        // 生成器函数
+        function* gen(arg) {
+            console.log(arg);
+            let one = yield '171';
+            console.log(one);
+            let two = yield '252';
+            console.log(two);
+            yield '363';
+        };
+        // 执行获取迭代器对象
+        let iterator = gen(121); // 传入实参
+        console.log(iterator.next()); // 启动迭代器(生成函数)
+        // next传参数
+        console.log(iterator.next(111)); // 值作为下一次输出的value
+        console.log(iterator.next(222)); // 同理值作为下一次输出的value
+        // 异步编程 文件操作 网络操作（Ajax，request） 数据库等
+        // 1s输出111，然后2s输出222，然后3s输出333，一共需要六秒 函数daYin()
+        const daYin = () => {
+            let num_ms = 1000;
+            let num_daYin = 111;
+
+            const one = () => {
+                setTimeout(() => {
+                    console.log(num_daYin);
+                    num_daYin += 111;
+                    num_ms += 1000;
+                    iterator.next(); // 迭代下一个
+                }, num_ms);
+            };
+
+            function* gen() {
+                yield one();
+                yield one();
+                yield one();
+            };
+            let iterator = gen();
+            iterator.next(); // 开启迭代
+        };
+        daYin();
+
+        // 异步编程
+        const p = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                let data = '提取用户数据成功！！';
+                let err = '提取数据失败！！';
+                // reject(err);
+                resolve(data);
+            }, 1000);
+        });
+        // 链式调用
+        const result = p.then(value => {
+            console.log(value);
+            return 202;
+        }, reason => {
+            console.error(reason);
+            console.warn(reason);
+            return 404;
+        }).then(value => {}, reason => {});
+        console.log(result);
     </script>
 </body>
 
